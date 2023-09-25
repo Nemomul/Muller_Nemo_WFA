@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace SnakeProject_WFA
@@ -91,6 +92,7 @@ namespace SnakeProject_WFA
         private void StartGame(object sender, EventArgs e)
         {
             RestartGame();
+            Difficulty();
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
@@ -218,7 +220,7 @@ namespace SnakeProject_WFA
             maxHeight= picCanvas.Height / Settings.Height - 1;
 
             Snake.Clear();
-
+            DifficultyGame.Enabled = false;
             startButton.Enabled = false;
             score = 0;
             txtScore.Text = "Score" + score;
@@ -256,7 +258,7 @@ namespace SnakeProject_WFA
         {
             gameTimer.Stop();
             startButton.Enabled = true;
-
+            DifficultyGame.Enabled = true;
             if (score > highScore)
             {
                 highScore = score;
@@ -268,9 +270,21 @@ namespace SnakeProject_WFA
         }
         private void Difficulty()
         {
-
+            if (DifficultyGame.SelectedIndex == 0) 
+            {
+               gameTimer.Interval = 50;
+                
+            }
+            if (DifficultyGame.SelectedIndex == 1)
+            {
+                gameTimer.Interval = 30;
+                
+            }
+            if (DifficultyGame.SelectedIndex == 2)
+            {
+                gameTimer.Interval = 18;
+                
+            }
         }
-
-
     }
 }

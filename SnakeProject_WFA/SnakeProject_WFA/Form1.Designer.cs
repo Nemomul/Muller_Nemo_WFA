@@ -34,13 +34,14 @@
             this.txtScore = new System.Windows.Forms.Label();
             this.txtHighScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DifficultyGame = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
             // 
             this.startButton.BackColor = System.Drawing.Color.Crimson;
+            this.startButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startButton.Font = new System.Drawing.Font("Teko SemiBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.startButton.Location = new System.Drawing.Point(604, 21);
             this.startButton.Name = "startButton";
@@ -87,18 +88,19 @@
             this.gameTimer.Interval = 40;
             this.gameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
             // 
-            // comboBox1
+            // DifficultyGame
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.DifficultyGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DifficultyGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DifficultyGame.FormattingEnabled = true;
+            this.DifficultyGame.Items.AddRange(new object[] {
             "¤¤ Facile ¤¤",
             "¤¤ Normal ¤¤ ",
             "¤¤ HardCore ¤¤"});
-            this.comboBox1.Location = new System.Drawing.Point(604, 118);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 23);
-            this.comboBox1.TabIndex = 6;
+            this.DifficultyGame.Location = new System.Drawing.Point(604, 118);
+            this.DifficultyGame.Name = "DifficultyGame";
+            this.DifficultyGame.Size = new System.Drawing.Size(131, 23);
+            this.DifficultyGame.TabIndex = 6;
             // 
             // Form1
             // 
@@ -106,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(748, 725);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.DifficultyGame);
             this.Controls.Add(this.txtHighScore);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.picCanvas);
@@ -128,6 +130,6 @@
         private Label txtScore;
         private Label txtHighScore;
         private System.Windows.Forms.Timer gameTimer;
-        private ComboBox comboBox1;
+        private ComboBox DifficultyGame;
     }
 }
