@@ -20,6 +20,9 @@ namespace SnakeProject_WFA
         int minHeight;
         int score;
         int highScore;
+        int highScoreFacile;
+        int highScoreNormal;
+        int highScoreDifficile;
 
         Random rand = new Random();
 
@@ -32,6 +35,7 @@ namespace SnakeProject_WFA
             InitializeComponent();
 
             new Settings();
+         
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace SnakeProject_WFA
             {
                 goUp = true;
             }
-            if (e.KeyCode == Keys.Down && Settings.direction != "Up")
+            if (e.KeyCode == Keys.Down && Settings.direction != "up")
             {
                 goDown = true;
             }
@@ -93,6 +97,8 @@ namespace SnakeProject_WFA
         {
             RestartGame();
             Difficulty();
+            
+
         }
 
         private void GameTimerEvent(object sender, EventArgs e)
@@ -223,7 +229,7 @@ namespace SnakeProject_WFA
             DifficultyGame.Enabled = false;
             startButton.Enabled = false;
             score = 0;
-            txtScore.Text = "Score" + score;
+            txtScore.Text = "Score : " + score;
 
             Circle head = new Circle { X = 10, Y= 5 };
             Snake.Add(head);
@@ -242,7 +248,7 @@ namespace SnakeProject_WFA
         private void EatFood()
         {
             score += 1;
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "Score : " + score;
 
             Circle body = new Circle
             {
@@ -259,32 +265,59 @@ namespace SnakeProject_WFA
             gameTimer.Stop();
             startButton.Enabled = true;
             DifficultyGame.Enabled = true;
-            if (score > highScore)
+            if (DifficultyGame.SelectedIndex == 0 && score > highScoreFacile)
             {
                 highScore = score;
+                highScoreFacile = highScore;
 
-                txtHighScore.Text = "High score: " + Environment.NewLine + highScore;
-                txtHighScore.ForeColor = Color.Maroon;
+
+                txtHighScore.Text = "High score (facile) : " + Environment.NewLine + highScoreFacile;
+                txtHighScore.ForeColor = Color.Green;
                 txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
             }
+            if (DifficultyGame.SelectedIndex == 1 && score > highScoreNormal)
+            {
+                highScore = score;
+                highScoreNormal = highScore;
+
+
+                txtHighScore.Text = "High score (normal) : " + Environment.NewLine + highScoreNormal;
+                txtHighScore.ForeColor = Color.Green;
+                txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
+            }
+            if (DifficultyGame.SelectedIndex == 2 && score > highScoreDifficile)
+            {
+                highScore = score;
+                highScoreDifficile = highScore;
+
+
+                txtHighScore.Text = "High score (hardcore) : " + Environment.NewLine + highScoreDifficile;
+                txtHighScore.ForeColor = Color.Green;
+                txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
+            }
+
         }
         private void Difficulty()
         {
             if (DifficultyGame.SelectedIndex == 0) 
             {
                gameTimer.Interval = 50;
-                
+                txtHighScore.Text = "High score (facile) : " + Environment.NewLine + highScoreFacile;
+                txtHighScore.ForeColor = Color.Black;
             }
             if (DifficultyGame.SelectedIndex == 1)
             {
                 gameTimer.Interval = 30;
-                
+                txtHighScore.Text = "High score (normal) : " + Environment.NewLine + highScoreNormal;
+                txtHighScore.ForeColor = Color.Black;
             }
             if (DifficultyGame.SelectedIndex == 2)
             {
                 gameTimer.Interval = 18;
-                
+                txtHighScore.Text = "High score (difficile) : " + Environment.NewLine + highScoreDifficile;
+                txtHighScore.ForeColor = Color.Black;
             }
         }
+
     }
 }
