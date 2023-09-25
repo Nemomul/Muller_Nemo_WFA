@@ -1,4 +1,10 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Imaging;
+
 
 namespace SnakeProject_WFA
 {
@@ -87,11 +93,6 @@ namespace SnakeProject_WFA
             RestartGame();
         }
 
-        private void TakeSnapShot(object sender, EventArgs e)
-        {
-
-        }
-
         private void GameTimerEvent(object sender, EventArgs e)
         {
             if (goLeft)
@@ -147,6 +148,21 @@ namespace SnakeProject_WFA
                     {
                         Snake[i].Y = 0;
                     }
+
+
+                    if (Snake[i].X == food.X && Snake[i].Y == food.Y)
+                    {
+                        EatFood();
+                    }
+
+                    for(int j = 1; j < Snake.Count; j++)
+                    {
+                        if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
+                        {
+                            GameOver();
+                        }
+                    }
+
                 }
                 else
                 {
@@ -193,12 +209,7 @@ namespace SnakeProject_WFA
                     food.X * Settings.Width,
                     food.Y * Settings.Height,
                     Settings.Width, Settings.Height
-
                     ));
-
-
-
-
         }
 
         private void RestartGame()
@@ -209,7 +220,6 @@ namespace SnakeProject_WFA
             Snake.Clear();
 
             startButton.Enabled = false;
-            snapButton.Enabled = false;
             score = 0;
             txtScore.Text = "Score" + score;
 
@@ -229,12 +239,38 @@ namespace SnakeProject_WFA
 
         private void EatFood()
         {
+            score += 1;
+            txtScore.Text = "Score: " + score;
 
+            Circle body = new Circle
+            {
+                X = Snake[Snake.Count - 1].X,
+                Y = Snake[Snake.Count - 1].Y
+            };
+
+            Snake.Add(body);
+            food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
         }
 
         private void GameOver()
         {
+            gameTimer.Stop();
+            startButton.Enabled = true;
+
+            if (score > highScore)
+            {
+                highScore = score;
+
+                txtHighScore.Text = "High score: " + Environment.NewLine + highScore;
+                txtHighScore.ForeColor = Color.Maroon;
+                txtHighScore.TextAlign = ContentAlignment.MiddleCenter;
+            }
+        }
+        private void Difficulty()
+        {
 
         }
+
+
     }
 }
