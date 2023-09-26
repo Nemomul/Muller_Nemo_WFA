@@ -5,6 +5,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Data;
 
 
 namespace SnakeProject_WFA
@@ -24,6 +26,8 @@ namespace SnakeProject_WFA
         int highScoreNormal;
         int highScoreDifficile;
 
+        
+
         Random rand = new Random();
 
         bool goLeft, goRight, goDown, goUp;
@@ -35,7 +39,8 @@ namespace SnakeProject_WFA
             InitializeComponent();
 
             new Settings();
-         
+
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -189,8 +194,9 @@ namespace SnakeProject_WFA
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
             Graphics canvas = e.Graphics;
-
             Brush snakeColour;
+
+            Image foodImage = Properties.Resources.apple;
 
             for (int i = 0; i < Snake.Count; i++)
             {
@@ -212,7 +218,7 @@ namespace SnakeProject_WFA
                     ));
             }
 
-            canvas.FillEllipse(Brushes.DarkRed, new Rectangle
+            canvas.DrawImage(foodImage, new Rectangle
                     (
                     food.X * Settings.Width,
                     food.Y * Settings.Height,
@@ -313,7 +319,7 @@ namespace SnakeProject_WFA
             }
             if (DifficultyGame.SelectedIndex == 2)
             {
-                gameTimer.Interval = 18;
+                gameTimer.Interval = 15;
                 txtHighScore.Text = "High score (difficile) : " + Environment.NewLine + highScoreDifficile;
                 txtHighScore.ForeColor = Color.Black;
             }

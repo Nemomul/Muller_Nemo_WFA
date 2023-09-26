@@ -15,3 +15,4 @@ C:\Users\mulle\Documents\GitHub\Muller_Nemo_WFA\SnakeProject_WFA\SnakeProject_WF
 C:\Users\mulle\Documents\GitHub\Muller_Nemo_WFA\SnakeProject_WFA\SnakeProject_WFA\obj\Debug\net6.0-windows\SnakeProject_WFA.pdb
 C:\Users\mulle\Documents\GitHub\Muller_Nemo_WFA\SnakeProject_WFA\SnakeProject_WFA\obj\Debug\net6.0-windows\SnakeProject_WFA.genruntimeconfig.cache
 C:\Users\mulle\Documents\GitHub\Muller_Nemo_WFA\SnakeProject_WFA\SnakeProject_WFA\obj\Debug\net6.0-windows\ref\SnakeProject_WFA.dll
+C:\Users\mulle\Documents\GitHub\Muller_Nemo_WFA\SnakeProject_WFA\SnakeProject_WFA\obj\Debug\net6.0-windows\SnakeProject_WFA.Properties.Resources.resources
