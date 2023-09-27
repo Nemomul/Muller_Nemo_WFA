@@ -16,6 +16,9 @@ namespace SnakeProject_WFA
         private List <Circle> Snake = new List<Circle>();
         private Circle food = new Circle();
         private Circle badfood = new Circle();
+        private Circle goldfood = new Circle();
+
+        private int applesEaten = 0;
 
         int maxWidth;
         int minWidth;
@@ -33,7 +36,7 @@ namespace SnakeProject_WFA
 
         bool goLeft, goRight, goDown, goUp;
 
-
+        
 
         public Form1()
         {
@@ -43,7 +46,7 @@ namespace SnakeProject_WFA
 
            
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -174,6 +177,10 @@ namespace SnakeProject_WFA
                     {
                         EatBadApple();
                     }
+                    if (Snake[i].X == goldfood.X && Snake[i].Y == goldfood.Y)
+                    {
+                        EatGoldApple();
+                    }
 
                     for (int j = 1; j < Snake.Count; j++)
                     {
@@ -207,6 +214,7 @@ namespace SnakeProject_WFA
 
             Image foodImage = Properties.Resources.apple;
             Image badfoodImage = Properties.Resources.apple_bad;
+            Image goldfoodImage = Properties.Resources.apple_golden;
 
             for (int i = 0; i < Snake.Count; i++)
             {
@@ -271,9 +279,15 @@ namespace SnakeProject_WFA
                     badfood.Y * Settings.Height,
                     Settings.Width, Settings.Height
                     ));
-            
-                
-        }
+                canvas.DrawImage(goldfoodImage, new Rectangle
+                    (
+                    goldfood.X * Settings.Width,
+                    goldfood.Y * Settings.Height,
+                    Settings.Width, Settings.Height
+                    ));
+
+
+            }
     }
 
         private void RestartGame()
@@ -298,6 +312,7 @@ namespace SnakeProject_WFA
 
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            goldfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
 
             gameTimer.Start();
         }
@@ -326,7 +341,29 @@ namespace SnakeProject_WFA
             }
 
             txtScore.Text = "Score : " + score;
-            badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+
+            badfood.X = -1; 
+            badfood.Y = -1;
+
+        }
+        private void EatGoldApple()
+        {
+            score += 5;
+            txtScore.Text = "Score : " + score;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Circle body = new Circle
+                {
+                    X = Snake[Snake.Count - 1].X,
+                    Y = Snake[Snake.Count - 1].Y
+                };
+
+                Snake.Add(body);
+            }
+
+            goldfood.X = -1;
+            goldfood.Y = -1;
 
         }
 
@@ -343,7 +380,18 @@ namespace SnakeProject_WFA
 
             Snake.Add(body);
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-            
+
+            if (applesEaten % 3 == 0)
+            {
+                badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            }
+            if (applesEaten % 5 == 0)
+            {
+                goldfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            }
+
+            applesEaten++;
+
         }
 
         private void GameOver()

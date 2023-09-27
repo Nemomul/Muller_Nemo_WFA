@@ -35,6 +35,7 @@
             this.txtHighScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.DifficultyGame = new System.Windows.Forms.ComboBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +103,12 @@
             this.DifficultyGame.Size = new System.Drawing.Size(131, 23);
             this.DifficultyGame.TabIndex = 6;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -131,5 +138,6 @@
         private Label txtHighScore;
         private System.Windows.Forms.Timer gameTimer;
         private ComboBox DifficultyGame;
+        private ImageList imageList1;
     }
 }
