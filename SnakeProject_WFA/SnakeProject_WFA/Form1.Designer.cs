@@ -35,7 +35,6 @@
             this.txtHighScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.DifficultyGame = new System.Windows.Forms.ComboBox();
-            this.txtHighScore3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,22 +102,12 @@
             this.DifficultyGame.Size = new System.Drawing.Size(131, 23);
             this.DifficultyGame.TabIndex = 6;
             // 
-            // txtHighScore3
-            // 
-            this.txtHighScore3.AutoSize = true;
-            this.txtHighScore3.Font = new System.Drawing.Font("Old English Text MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtHighScore3.Location = new System.Drawing.Point(604, 381);
-            this.txtHighScore3.Name = "txtHighScore3";
-            this.txtHighScore3.Size = new System.Drawing.Size(0, 23);
-            this.txtHighScore3.TabIndex = 8;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(748, 725);
-            this.Controls.Add(this.txtHighScore3);
             this.Controls.Add(this.DifficultyGame);
             this.Controls.Add(this.txtHighScore);
             this.Controls.Add(this.txtScore);
@@ -142,6 +131,5 @@
         private Label txtHighScore;
         private System.Windows.Forms.Timer gameTimer;
         private ComboBox DifficultyGame;
-        private Label txtHighScore3;
     }
 }

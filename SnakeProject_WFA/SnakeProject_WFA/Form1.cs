@@ -15,6 +15,7 @@ namespace SnakeProject_WFA
     {
         private List <Circle> Snake = new List<Circle>();
         private Circle food = new Circle();
+        private Circle badfood = new Circle();
 
         int maxWidth;
         int minWidth;
@@ -83,6 +84,7 @@ namespace SnakeProject_WFA
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
+
             }
             if (e.KeyCode == Keys.Right)
             {
@@ -168,7 +170,12 @@ namespace SnakeProject_WFA
                         EatFood();
                     }
 
-                    for(int j = 1; j < Snake.Count; j++)
+                    if (Snake[i].X == badfood.X && Snake[i].Y == badfood.Y)
+                    {
+                        EatBadApple();
+                    }
+
+                    for (int j = 1; j < Snake.Count; j++)
                     {
                         if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
                         {
@@ -194,37 +201,80 @@ namespace SnakeProject_WFA
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
             Graphics canvas = e.Graphics;
-            Brush snakeColour;
+
+            Image snakeBody = null;
+            Image snakeHead = null;
 
             Image foodImage = Properties.Resources.apple;
+            Image badfoodImage = Properties.Resources.apple_bad;
 
             for (int i = 0; i < Snake.Count; i++)
             {
+                if (i > 0)
+                {
+                    switch (Settings.direction)
+                    {
+                        case "left":
+                        case "right":
+
+                            snakeBody = Properties.Resources.snake_body_right_or_left;
+                            break;
+                        case "up":
+                        case "down":
+                            snakeBody = Properties.Resources.snake_body_up_or_down;
+                            break;
+                    }
+
+                    canvas.DrawImage(snakeBody, new Rectangle
+                        (
+                        Snake[i].X * Settings.Width,
+                        Snake[i].Y * Settings.Height,
+                        Settings.Width, Settings.Height
+                        ));
+                }
+
                 if (i == 0)
                 {
-                    snakeColour = Brushes.Black;
-                }
-                else
-                {
-                    snakeColour = Brushes.DarkGreen;
+                    switch (Settings.direction)
+                    {
+                        case "left":
+                            snakeHead = Properties.Resources.snake_head_left;
+                            break;
+                        case "right":
+                            snakeHead = Properties.Resources.snake_head_right;
+                            break;
+                        case "down":
+                            snakeHead = Properties.Resources.snake_head_down;
+                            break;
+                        case "up":
+                            snakeHead = Properties.Resources.snake_head_up;
+                            break;
+                    }
+
+                    canvas.DrawImage(snakeHead, new Rectangle
+                        (
+                        Snake[i].X * Settings.Width,
+                        Snake[i].Y * Settings.Height,
+                        Settings.Width, Settings.Height
+                        ));
                 }
 
-                canvas.FillEllipse(snakeColour, new Rectangle
-                    (
-                    Snake[i].X * Settings.Width,
-                    Snake[i].Y * Settings.Height,
-                    Settings.Width, Settings.Height
-                    
-                    ));
-            }
-
-            canvas.DrawImage(foodImage, new Rectangle
+                canvas.DrawImage(foodImage, new Rectangle
                     (
                     food.X * Settings.Width,
                     food.Y * Settings.Height,
                     Settings.Width, Settings.Height
                     ));
+                canvas.DrawImage(badfoodImage, new Rectangle
+                    (
+                    badfood.X * Settings.Width,
+                    badfood.Y * Settings.Height,
+                    Settings.Width, Settings.Height
+                    ));
+            
+                
         }
+    }
 
         private void RestartGame()
         {
@@ -237,9 +287,9 @@ namespace SnakeProject_WFA
             score = 0;
             txtScore.Text = "Score : " + score;
 
+            
             Circle head = new Circle { X = 10, Y= 5 };
             Snake.Add(head);
-
             for (int i = 0; i < 10; i++)
             {
                 Circle body = new Circle();
@@ -247,8 +297,37 @@ namespace SnakeProject_WFA
             }
 
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
 
             gameTimer.Start();
+        }
+        private void EatBadApple()
+        {
+            int pointsToRemove =  5;
+
+            if (score >= pointsToRemove)
+            {
+                score -= pointsToRemove;
+            }
+
+            else
+
+            {
+                score = 0;
+            }
+
+            if (Snake.Count < pointsToRemove) 
+            {
+                GameOver();
+            }
+            else
+            {
+                Snake.RemoveRange(Snake.Count - 5, 5);
+            }
+
+            txtScore.Text = "Score : " + score;
+            badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+
         }
 
         private void EatFood()
@@ -264,6 +343,7 @@ namespace SnakeProject_WFA
 
             Snake.Add(body);
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            
         }
 
         private void GameOver()
@@ -305,6 +385,7 @@ namespace SnakeProject_WFA
         }
         private void Difficulty()
         {
+            
             if (DifficultyGame.SelectedIndex == 0) 
             {
                gameTimer.Interval = 50;
