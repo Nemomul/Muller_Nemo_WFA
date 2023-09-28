@@ -118,55 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="apple_bad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apple-bad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_head_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-head-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apple_golden" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apple-golden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_body_right_or_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-body-right-or-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snake_body_up_or_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-body-up-or-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snake_head_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-head-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snake_head_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-head-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="snake_head_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-head-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="snake_head_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snake-head-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_tail_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-tail-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_head_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-head-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_tail_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-tail-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apple_bad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple-bad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_tail_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-tail-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_head_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-head-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_tail_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-tail-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_turn_from_down_to_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-turn-from-down-to-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_neck_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_turn_from_right_to_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-turn-from-right-to-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_neck_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_turn_from_right_to_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-turn-from-right-to-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_neck_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_turn_from_up_to_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-turn-from-up-to-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="snake_neck_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

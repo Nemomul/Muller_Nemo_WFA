@@ -36,17 +36,16 @@ namespace SnakeProject_WFA
 
         bool goLeft, goRight, goDown, goUp;
 
-        
 
+
+        // Constructeur de la classe Form1
         public Form1()
         {
             InitializeComponent();
 
             new Settings();
-
-           
         }
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -62,8 +61,10 @@ namespace SnakeProject_WFA
 
         }
 
+        // Fonction déclenchée lorsqu'une touche est enfoncée
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
+            // Gestion des touches enfoncées pour le contrôle du serpent
             if (e.KeyCode == Keys.Left && Settings.direction != "right")
             {
                 goLeft = true;
@@ -82,8 +83,10 @@ namespace SnakeProject_WFA
             }
         }
 
+        // Fonction déclenchée lorsqu'une touche est relâchée
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
+            // Gestion des touches relâchées pour le contrôle du serpent
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = false;
@@ -103,16 +106,20 @@ namespace SnakeProject_WFA
             }
         }
 
+        // Fonction déclenchée lorsqu'on commence une nouvelle partie
         private void StartGame(object sender, EventArgs e)
         {
+            // Initialisation du jeu et choix de la difficulté
             RestartGame();
             Difficulty();
             
 
         }
 
+        // Fonction principale du jeu, appelée à chaque intervalle de temps
         private void GameTimerEvent(object sender, EventArgs e)
         {
+            // Logique principale du jeu, déplacement du serpent, gestion des collisions, etc.
             if (goLeft)
             {
                 Settings.direction = "left";
@@ -205,34 +212,25 @@ namespace SnakeProject_WFA
 
         }
 
+        // Fonction de mise à jour de l'affichage dans le PictureBox
         private void UpdatePictureBoxGraphics(object sender, PaintEventArgs e)
         {
+            // Dessin du serpent, de la nourriture et d'autres éléments du jeu
             Graphics canvas = e.Graphics;
 
-            Image snakeBody = null;
+            
             Image snakeHead = null;
+            Image snakeNeck = null;
 
+            Image snakeBody = Properties.Resources.snake_body;
             Image foodImage = Properties.Resources.apple;
             Image badfoodImage = Properties.Resources.apple_bad;
             Image goldfoodImage = Properties.Resources.apple_golden;
 
             for (int i = 0; i < Snake.Count; i++)
             {
-                if (i > 0)
+                if (i > 1)
                 {
-                    switch (Settings.direction)
-                    {
-                        case "left":
-                        case "right":
-
-                            snakeBody = Properties.Resources.snake_body_right_or_left;
-                            break;
-                        case "up":
-                        case "down":
-                            snakeBody = Properties.Resources.snake_body_up_or_down;
-                            break;
-                    }
-
                     canvas.DrawImage(snakeBody, new Rectangle
                         (
                         Snake[i].X * Settings.Width,
@@ -240,7 +238,6 @@ namespace SnakeProject_WFA
                         Settings.Width, Settings.Height
                         ));
                 }
-
                 if (i == 0)
                 {
                     switch (Settings.direction)
@@ -260,6 +257,31 @@ namespace SnakeProject_WFA
                     }
 
                     canvas.DrawImage(snakeHead, new Rectangle
+                        (
+                        Snake[i].X * Settings.Width,
+                        Snake[i].Y * Settings.Height,
+                        Settings.Width, Settings.Height
+                        ));
+                }
+                if (i == 1)
+                {
+                    switch (Settings.direction)
+                    {
+                        case "left":
+                            snakeNeck = Properties.Resources.snake_neck_right;
+                            break;
+                        case "right":
+                            snakeNeck = Properties.Resources.snake_neck_left;
+                            break;
+                        case "down":
+                            snakeNeck = Properties.Resources.snake_neck_up;
+                            break;
+                        case "up":
+                            snakeNeck = Properties.Resources.snake_neck_down;
+                            break;
+                    }
+
+                    canvas.DrawImage(snakeNeck, new Rectangle
                         (
                         Snake[i].X * Settings.Width,
                         Snake[i].Y * Settings.Height,
@@ -290,9 +312,11 @@ namespace SnakeProject_WFA
             }
     }
 
+        // Fonction de redémarrage du jeu
         private void RestartGame()
         {
-            maxWidth= picCanvas.Width / Settings.Width - 1;
+            // Réinitialisation du jeu, du serpent et de la nourriture
+            maxWidth = picCanvas.Width / Settings.Width - 1;
             maxHeight= picCanvas.Height / Settings.Height - 1;
 
             Snake.Clear();
@@ -316,8 +340,10 @@ namespace SnakeProject_WFA
 
             gameTimer.Start();
         }
+        // Fonction appelée lorsque le serpent mange une mauvaise pomme
         private void EatBadApple()
         {
+            // Gestion de la collision avec une mauvaise pomme
             int pointsToRemove =  5;
 
             if (score >= pointsToRemove)
@@ -346,8 +372,10 @@ namespace SnakeProject_WFA
             badfood.Y = -1;
 
         }
+        // Fonction appelée lorsque le serpent mange une pomme en or
         private void EatGoldApple()
         {
+            // Gestion de la collision avec une pomme en or
             score += 5;
             txtScore.Text = "Score : " + score;
 
@@ -367,8 +395,10 @@ namespace SnakeProject_WFA
 
         }
 
+        // Fonction appelée lorsque le serpent mange une pomme normale
         private void EatFood()
         {
+            // Gestion de la collision avec une pomme normale
             score += 1;
             txtScore.Text = "Score : " + score;
 
@@ -394,8 +424,10 @@ namespace SnakeProject_WFA
 
         }
 
+        // Fonction appelée lorsque la partie est terminée
         private void GameOver()
         {
+            // Gestion de la fin de partie, arrêt du jeu, mise à jour du score, etc.
             gameTimer.Stop();
             startButton.Enabled = true;
             DifficultyGame.Enabled = true;
@@ -431,9 +463,11 @@ namespace SnakeProject_WFA
             }
 
         }
+        // Fonction de gestion de la difficulté du jeu
         private void Difficulty()
         {
-            
+            // Définition de la difficulté en ajustant l'intervalle de temps du jeu
+
             if (DifficultyGame.SelectedIndex == 0) 
             {
                gameTimer.Interval = 50;

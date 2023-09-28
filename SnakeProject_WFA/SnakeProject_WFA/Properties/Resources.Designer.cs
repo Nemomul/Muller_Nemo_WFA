@@ -93,19 +93,9 @@ namespace SnakeProject_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_body_right_or_left {
+        internal static System.Drawing.Bitmap snake_body {
             get {
-                object obj = ResourceManager.GetObject("snake_body_right_or_left", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snake_body_up_or_down {
-            get {
-                object obj = ResourceManager.GetObject("snake_body_up_or_down", resourceCulture);
+                object obj = ResourceManager.GetObject("snake_body", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace SnakeProject_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_tail_down {
+        internal static System.Drawing.Bitmap snake_neck_down {
             get {
-                object obj = ResourceManager.GetObject("snake_tail_down", resourceCulture);
+                object obj = ResourceManager.GetObject("snake_neck_down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +153,9 @@ namespace SnakeProject_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_tail_left {
+        internal static System.Drawing.Bitmap snake_neck_left {
             get {
-                object obj = ResourceManager.GetObject("snake_tail_left", resourceCulture);
+                object obj = ResourceManager.GetObject("snake_neck_left", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +163,9 @@ namespace SnakeProject_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_tail_right {
+        internal static System.Drawing.Bitmap snake_neck_right {
             get {
-                object obj = ResourceManager.GetObject("snake_tail_right", resourceCulture);
+                object obj = ResourceManager.GetObject("snake_neck_right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,49 +173,9 @@ namespace SnakeProject_WFA.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_tail_up {
+        internal static System.Drawing.Bitmap snake_neck_up {
             get {
-                object obj = ResourceManager.GetObject("snake_tail_up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snake_turn_from_down_to_right {
-            get {
-                object obj = ResourceManager.GetObject("snake_turn_from_down_to_right", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snake_turn_from_right_to_down {
-            get {
-                object obj = ResourceManager.GetObject("snake_turn_from_right_to_down", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snake_turn_from_right_to_up {
-            get {
-                object obj = ResourceManager.GetObject("snake_turn_from_right_to_up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap snake_turn_from_up_to_right {
-            get {
-                object obj = ResourceManager.GetObject("snake_turn_from_up_to_right", resourceCulture);
+                object obj = ResourceManager.GetObject("snake_neck_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
