@@ -17,13 +17,12 @@ namespace SnakeProject_WFA
         private Circle food = new Circle();
         private Circle badfood = new Circle();
         private Circle goldfood = new Circle();
+        private Circle portaldifficulty = new Circle();
 
         private int applesEaten = 0;
 
         int maxWidth;
-        int minWidth;
         int maxHeight;
-        int minHeight;
         int score;
         int highScore;
         int highScoreFacile;
@@ -44,11 +43,12 @@ namespace SnakeProject_WFA
             InitializeComponent();
 
             new Settings();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            DifficultyGame.SelectedIndex = 0;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -113,7 +113,6 @@ namespace SnakeProject_WFA
             RestartGame();
             Difficulty();
             
-
         }
 
         // Fonction principale du jeu, appelée à chaque intervalle de temps
@@ -173,8 +172,7 @@ namespace SnakeProject_WFA
                     {
                         Snake[i].Y = 0;
                     }
-
-
+                    
                     if (Snake[i].X == food.X && Snake[i].Y == food.Y)
                     {
                         EatFood();
@@ -187,6 +185,11 @@ namespace SnakeProject_WFA
                     if (Snake[i].X == goldfood.X && Snake[i].Y == goldfood.Y)
                     {
                         EatGoldApple();
+                    }
+
+                    if (score >= 25 && Snake[i].X == portaldifficulty.X && Snake[i].Y == portaldifficulty.Y)
+                    {
+                        EatPortalDifficulty();
                     }
 
                     for (int j = 1; j < Snake.Count; j++)
@@ -226,6 +229,7 @@ namespace SnakeProject_WFA
             Image foodImage = Properties.Resources.apple;
             Image badfoodImage = Properties.Resources.apple_bad;
             Image goldfoodImage = Properties.Resources.apple_golden;
+            Image portalDifficulty = Properties.Resources.Difficulty_Portal;
 
             for (int i = 0; i < Snake.Count; i++)
             {
@@ -307,14 +311,27 @@ namespace SnakeProject_WFA
                     goldfood.Y * Settings.Height,
                     Settings.Width, Settings.Height
                     ));
+            }
 
+            if (score >= 25)
+            {
+                //portaldifficulty.X = (maxWidth / 2) - (Settings.Width / 2); // Calcul de la position X
+                //portaldifficulty.Y = (maxHeight / 2) - (Settings.Height / 2); // Calcul de la position Y
+
+                canvas.DrawImage(portalDifficulty, new Rectangle
+                    (
+                    portaldifficulty.X * Settings.Width, 
+                    portaldifficulty.Y * Settings.Height,
+                    Settings.Width, Settings.Height
+                ));
 
             }
-    }
+        }
 
         // Fonction de redémarrage du jeu
         private void RestartGame()
         {
+            
             // Réinitialisation du jeu, du serpent et de la nourriture
             maxWidth = picCanvas.Width / Settings.Width - 1;
             maxHeight= picCanvas.Height / Settings.Height - 1;
@@ -337,7 +354,9 @@ namespace SnakeProject_WFA
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             goldfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-
+            portaldifficulty = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+         
+             
             gameTimer.Start();
         }
         // Fonction appelée lorsque le serpent mange une mauvaise pomme
@@ -370,7 +389,7 @@ namespace SnakeProject_WFA
 
             badfood.X = -1; 
             badfood.Y = -1;
-
+            
         }
         // Fonction appelée lorsque le serpent mange une pomme en or
         private void EatGoldApple()
@@ -378,6 +397,8 @@ namespace SnakeProject_WFA
             // Gestion de la collision avec une pomme en or
             score += 5;
             txtScore.Text = "Score : " + score;
+
+            
 
             for (int i = 0; i < 5; i++)
             {
@@ -419,6 +440,7 @@ namespace SnakeProject_WFA
             {
                 goldfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             }
+            
 
             applesEaten++;
 
@@ -466,6 +488,7 @@ namespace SnakeProject_WFA
         // Fonction de gestion de la difficulté du jeu
         private void Difficulty()
         {
+            
             // Définition de la difficulté en ajustant l'intervalle de temps du jeu
 
             if (DifficultyGame.SelectedIndex == 0) 
@@ -487,6 +510,14 @@ namespace SnakeProject_WFA
                 txtHighScore.ForeColor = Color.Black;
             }
         }
+        private void EatPortalDifficulty()
+        {
 
+            gameTimer.Interval = 30;
+
+            portaldifficulty.X = -1;
+            portaldifficulty.Y = -1;
+            
+        }
     }
 }

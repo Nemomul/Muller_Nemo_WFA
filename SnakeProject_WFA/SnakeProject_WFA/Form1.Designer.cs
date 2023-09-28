@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.startButton = new System.Windows.Forms.Button();
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.txtScore = new System.Windows.Forms.Label();
@@ -36,7 +37,9 @@
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.DifficultyGame = new System.Windows.Forms.ComboBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
@@ -44,9 +47,9 @@
             this.startButton.BackColor = System.Drawing.Color.Crimson;
             this.startButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startButton.Font = new System.Drawing.Font("Teko SemiBold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.startButton.Location = new System.Drawing.Point(604, 21);
+            this.startButton.Location = new System.Drawing.Point(630, 21);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(132, 57);
+            this.startButton.Size = new System.Drawing.Size(147, 57);
             this.startButton.TabIndex = 2;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = false;
@@ -54,7 +57,7 @@
             // 
             // picCanvas
             // 
-            this.picCanvas.BackColor = System.Drawing.Color.OliveDrab;
+            this.picCanvas.BackColor = System.Drawing.Color.Green;
             this.picCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picCanvas.Location = new System.Drawing.Point(12, 21);
             this.picCanvas.Name = "picCanvas";
@@ -96,12 +99,12 @@
             this.DifficultyGame.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DifficultyGame.FormattingEnabled = true;
             this.DifficultyGame.Items.AddRange(new object[] {
-            "¤¤ Facile ¤¤",
-            "¤¤ Normal ¤¤ ",
-            "¤¤ HardCore ¤¤"});
-            this.DifficultyGame.Location = new System.Drawing.Point(604, 118);
+            "           ¤¤ Facile ¤¤",
+            "          ¤¤ Normal ¤¤ ",
+            "         ¤¤ HardCore ¤¤"});
+            this.DifficultyGame.Location = new System.Drawing.Point(630, 117);
             this.DifficultyGame.Name = "DifficultyGame";
-            this.DifficultyGame.Size = new System.Drawing.Size(131, 23);
+            this.DifficultyGame.Size = new System.Drawing.Size(147, 23);
             this.DifficultyGame.TabIndex = 6;
             // 
             // imageList1
@@ -110,12 +113,24 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(630, 326);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(748, 725);
+            this.ClientSize = new System.Drawing.Size(823, 725);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.DifficultyGame);
             this.Controls.Add(this.txtHighScore);
             this.Controls.Add(this.txtScore);
@@ -127,6 +142,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +156,6 @@
         private System.Windows.Forms.Timer gameTimer;
         private ComboBox DifficultyGame;
         private ImageList imageList1;
+        private PictureBox pictureBox1;
     }
 }

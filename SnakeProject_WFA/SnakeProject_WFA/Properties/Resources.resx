@@ -121,11 +121,23 @@
   <data name="snake_head_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snake-head-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="snake_neck_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portal2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snake_neck_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snake_neck_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-neck-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="snake_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\snake-body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="apple_golden" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apple-golden.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="snake_head_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snake-head-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,19 +151,19 @@
   <data name="snake_head_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snake-head-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="portal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="snake_neck_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\snake-neck-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_neck_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-neck-left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logosnake1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logosnake1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_neck_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-neck-right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="snake_neck_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\snake-neck-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Difficulty_Portal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Difficulty_Portal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

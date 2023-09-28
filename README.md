@@ -13,17 +13,24 @@ Fonctionnalités :
 - Collecte de pommes pour augmenter le score
 - Gestion de pommes spéciales : mauvaise pomme et pomme en or
 - Différents niveaux de difficulté
+- Différents HighScore selon le niveaux de difficulté
 
 Séances de Développement : 
 
 Date       -  Description de la Séance
 
 28/09/2023	- Ajout de commentaires dans le code pour améliorer la lisibilité.\n- Correction de bugs mineurs.
+
 27/09/2023	- Gestion de la collecte de pommes normales.\n- Ajout de la logique de fin de partie.
+
 26/09/2023	- Mise en place du déplacement du serpent.\n- Implémentation de la fonction de gestion des collisions.
+
 25/09/2023	- Création du projet Snake en C#.\n- Conception de l'interface utilisateur.\n- Gestion des événements clavier.
+
 22/09/2023	- Planification du projet et recherche sur les technologies nécessaires.\n- Élaboration des spécifications du jeu.
+
 21/09/2023	- Idéation du projet Snake en C#.\n- Établissement des fonctionnalités principales.
+
 20/09/2023 - Choix de jeux et expérimentation du language c#
 
 Instructions d'Exécution : 
