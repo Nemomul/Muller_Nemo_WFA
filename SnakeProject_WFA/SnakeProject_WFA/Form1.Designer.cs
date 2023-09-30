@@ -70,7 +70,7 @@
             // 
             this.txtScore.AutoSize = true;
             this.txtScore.Font = new System.Drawing.Font("Old English Text MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtScore.Location = new System.Drawing.Point(604, 221);
+            this.txtScore.Location = new System.Drawing.Point(646, 220);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(89, 23);
             this.txtScore.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.txtHighScore.AutoSize = true;
             this.txtHighScore.Font = new System.Drawing.Font("Old English Text MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtHighScore.Location = new System.Drawing.Point(604, 272);
+            this.txtHighScore.Location = new System.Drawing.Point(621, 271);
             this.txtHighScore.Name = "txtHighScore";
             this.txtHighScore.Size = new System.Drawing.Size(131, 23);
             this.txtHighScore.TabIndex = 5;

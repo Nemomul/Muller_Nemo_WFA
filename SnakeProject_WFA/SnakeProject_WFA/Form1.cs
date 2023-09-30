@@ -187,10 +187,12 @@ namespace SnakeProject_WFA
                         EatGoldApple();
                     }
 
-                    if (score >= 25 && Snake[i].X == portaldifficulty.X && Snake[i].Y == portaldifficulty.Y)
+                    if (score >= 25 && Snake[i].X >= portaldifficulty.X && Snake[i].X < portaldifficulty.X + portaldifficulty.Width &&
+                        Snake[i].Y >= portaldifficulty.Y && Snake[i].Y < portaldifficulty.Y + portaldifficulty.Height)
                     {
                         EatPortalDifficulty();
                     }
+
 
                     for (int j = 1; j < Snake.Count; j++)
                     {
@@ -229,7 +231,7 @@ namespace SnakeProject_WFA
             Image foodImage = Properties.Resources.apple;
             Image badfoodImage = Properties.Resources.apple_bad;
             Image goldfoodImage = Properties.Resources.apple_golden;
-            Image portalDifficulty = Properties.Resources.Difficulty_Portal;
+            Image portalDifficulty = Properties.Resources.portal;
 
             for (int i = 0; i < Snake.Count; i++)
             {
@@ -315,15 +317,14 @@ namespace SnakeProject_WFA
 
             if (score >= 25)
             {
-                //portaldifficulty.X = (maxWidth / 2) - (Settings.Width / 2); // Calcul de la position X
-                //portaldifficulty.Y = (maxHeight / 2) - (Settings.Height / 2); // Calcul de la position Y
-
                 canvas.DrawImage(portalDifficulty, new Rectangle
                     (
-                    portaldifficulty.X * Settings.Width, 
+                    portaldifficulty.X * Settings.Width,
                     portaldifficulty.Y * Settings.Height,
-                    Settings.Width, Settings.Height
-                ));
+                    portaldifficulty.Width * Settings.Width,
+                    portaldifficulty.Height * Settings.Height
+                    ));
+
 
             }
         }
@@ -354,9 +355,11 @@ namespace SnakeProject_WFA
             food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             badfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
             goldfood = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-            portaldifficulty = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-         
-             
+            portaldifficulty = new Circle { X = rand.Next(2, maxWidth - 2), Y = rand.Next(2, maxHeight - 2), Width = 2, Height = 2 };
+
+
+
+
             gameTimer.Start();
         }
         // Fonction appelée lorsque le serpent mange une mauvaise pomme
@@ -513,11 +516,24 @@ namespace SnakeProject_WFA
         private void EatPortalDifficulty()
         {
 
-            gameTimer.Interval = 30;
-
-            portaldifficulty.X = -1;
-            portaldifficulty.Y = -1;
-            
+            if (DifficultyGame.SelectedIndex == 0)
+            {
+                gameTimer.Interval = 30;
+                portaldifficulty.X = -2;
+                portaldifficulty.Y = -2;
+            }
+            if (DifficultyGame.SelectedIndex == 1)
+            {
+                gameTimer.Interval = 20;
+                portaldifficulty.X = -2;
+                portaldifficulty.Y = -2;
+            }
+            if (DifficultyGame.SelectedIndex == 2)
+            {
+                gameTimer.Interval = 10;
+                portaldifficulty.X = -2;
+                portaldifficulty.Y = -2;
+            }
         }
     }
 }

@@ -10,7 +10,9 @@ namespace SnakeProject_WFA
     {
         public int X { get; set; }
         public int Y { get; set; }
-               public Circle() 
+        public int Width { get; set; } // Nouvelle propriété pour la largeur
+        public int Height { get; set; } // Nouvelle propriété pour la hauteur
+        public Circle() 
         {
             X = 0;
             Y = 0;
