@@ -16,6 +16,7 @@ Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage
 - Différents niveaux de difficulté
 - Différents HighScore selon le niveaux de difficulté
 - Changer le curseur quand on survole les difficultés et le bouton START
+- Changement de l'image de fond mais retraction sur l'utilisation de celle-ci car pas très beau
 
 # Séances de Développement et Planning d'Organisation de Travail : 
 
