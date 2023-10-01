@@ -5,7 +5,7 @@ Snake Game en C#
 
 # Description :
 
-Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage de programmation C# et la bibliothèque Windows Forms. Le jeu consiste à contrôler un serpent pour collecter des pommes tout en évitant les collisions avec les murs et le serpent lui-même.
+Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage de programmation C# et la bibliothèque Windows Forms. Le jeu consiste à contrôler un serpent pour collecter des pommes tout en évitant les collisions avec les murs et le serpent lui-même. Plusieurs foncitonnalités on étaient rajoutés, la pomme doré, qui donne plus de score et de la body length, la pomme empoisonné, qui enleve du score et de la body length, un portail de difficulté à partir de 25 de score que le joueur peut emprunter pour corser le gameplay
 
 # Fonctionnalités :
 
