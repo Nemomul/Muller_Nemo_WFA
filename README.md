@@ -12,6 +12,7 @@ Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage
 - Contrôle du serpent avec les touches fléchées
 - Collecte de pommes pour augmenter le score
 - Gestion de pommes spéciales : mauvaise pomme et pomme en or
+- Portail de difficulté après avoir atteint 25 de score dans chaque difficultés
 - Différents niveaux de difficulté
 - Différents HighScore selon le niveaux de difficulté
 
