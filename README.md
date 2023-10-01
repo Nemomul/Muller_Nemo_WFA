@@ -19,35 +19,35 @@ Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage
 
 - Le 21/09/2023 : Initialisation du Projet
 Actions :
-- Création du dépôt 
-- Initial commit (c8fe551)
-- Objectif : Mettre en place l'infrastructure de base du projet.
+  - Création du dépôt 
+  - Initial commit (c8fe551)
+  - Objectif : Mettre en place l'infrastructure de base du projet.
 
 
 - Entre le 21/09/2023 et le 25/09/2023 : Fonctionnalités de Base
 Actions :
-- Implémentation des contrôleurs, de l'aspect visuel et du minuteur de jeu (b2fa6ed)
-- Modifications : restartgame, remove snapshot option, difficulty adjustments (0129070)
-- Objectif : Mettre en place les bases du jeu, y compris les contrôles et l'aspect visuel.
+  - Implémentation des contrôleurs, de l'aspect visuel et du minuteur de jeu (b2fa6ed)
+  - Modifications : restartgame, remove snapshot option, difficulty adjustments (0129070)
+  - Objectif : Mettre en place les bases du jeu, y compris les contrôles et l'aspect visuel.
 
 
 - Entre le 26/09/2023 et le 30/09/2023 : Ajouts de Fonctionnalités
 Actions :
-- Modifications des difficultés et de l'esthétique du highscore (2701e88)
-- Fin des modifications pour la fonctionnalité de difficulté (6de541f)
-- Implémentation des bad apples et de leur fonctionnement (2027c53)
-- Ajout des fonctionnalités de la golden apple et de la bad apple (3641061)
-- Ajout du sprite pour les pommes (d332567)
-- Ajout du portail d'accélération (e11c8fa)
-- Ajout du portail de difficulté avec redimensionnement (2d78715)
-- Objectif : Ajouter des éléments de jeu tels que les pommes et les portails de difficulté.
+  - Modifications des difficultés et de l'esthétique du highscore (2701e88)
+  - Fin des modifications pour la fonctionnalité de difficulté (6de541f)
+  - Implémentation des bad apples et de leur fonctionnement (2027c53)
+  - Ajout des fonctionnalités de la golden apple et de la bad apple (3641061)
+  - Ajout du sprite pour les pommes (d332567)
+  - Ajout du portail d'accélération (e11c8fa)
+  - Ajout du portail de difficulté avec redimensionnement (2d78715)
+  - Objectif : Ajouter des éléments de jeu tels que les pommes et les portails de difficulté.
 
 
 - Le 01/10/2023 : Documentation et Améliorations
 Actions :
-- Mise à jour du fichier README.md (9123cb7)
-- Commentaires et améliorations de code (commit précédent)
-- Objectif : Documenter le projet et améliorer la lisibilité du code.
+  - Mise à jour du fichier README.md (9123cb7)
+  - Commentaires et améliorations de code (commit précédent)
+  - Objectif : Documenter le projet et améliorer la lisibilité du code.
 
 # Instructions d'Exécution : 
 
