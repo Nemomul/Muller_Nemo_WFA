@@ -15,23 +15,39 @@ Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage
 - Différents niveaux de difficulté
 - Différents HighScore selon le niveaux de difficulté
 
-# Séances de Développement : 
+# Séances de Développement et Planning d'Organisation de Travail : 
 
-Date       -  Description de la Séance
+- Le 21/09/2023 : Initialisation du Projet
+Actions :
+- Création du dépôt 
+- Initial commit (c8fe551)
+- Objectif : Mettre en place l'infrastructure de base du projet.
 
-28/09/2023	- Ajout de commentaires dans le code pour améliorer la lisibilité.\n- Correction de bugs mineurs.
 
-27/09/2023	- Gestion de la collecte de pommes normales.\n- Ajout de la logique de fin de partie.
+- Entre le 21/09/2023 et le 25/09/2023 : Fonctionnalités de Base
+Actions :
+- Implémentation des contrôleurs, de l'aspect visuel et du minuteur de jeu (b2fa6ed)
+- Modifications : restartgame, remove snapshot option, difficulty adjustments (0129070)
+- Objectif : Mettre en place les bases du jeu, y compris les contrôles et l'aspect visuel.
 
-26/09/2023	- Mise en place du déplacement du serpent.\n- Implémentation de la fonction de gestion des collisions.
 
-25/09/2023	- Création du projet Snake en C#.\n- Conception de l'interface utilisateur.\n- Gestion des événements clavier.
+- Entre le 26/09/2023 et le 30/09/2023 : Ajouts de Fonctionnalités
+Actions :
+- Modifications des difficultés et de l'esthétique du highscore (2701e88)
+- Fin des modifications pour la fonctionnalité de difficulté (6de541f)
+- Implémentation des bad apples et de leur fonctionnement (2027c53)
+- Ajout des fonctionnalités de la golden apple et de la bad apple (3641061)
+- Ajout du sprite pour les pommes (d332567)
+- Ajout du portail d'accélération (e11c8fa)
+- Ajout du portail de difficulté avec redimensionnement (2d78715)
+- Objectif : Ajouter des éléments de jeu tels que les pommes et les portails de difficulté.
 
-22/09/2023	- Planification du projet et recherche sur les technologies nécessaires.\n- Élaboration des spécifications du jeu.
 
-21/09/2023	- Idéation du projet Snake en C#.\n- Établissement des fonctionnalités principales.
-
-20/09/2023 - Choix de jeux et expérimentation du language c#
+- Le 01/10/2023 : Documentation et Améliorations
+Actions :
+- Mise à jour du fichier README.md (9123cb7)
+- Commentaires et améliorations de code (commit précédent)
+- Objectif : Documenter le projet et améliorer la lisibilité du code.
 
 # Instructions d'Exécution : 
 
