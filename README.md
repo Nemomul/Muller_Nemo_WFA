@@ -15,6 +15,7 @@ Ce projet est une implémentation du célèbre jeu Snake en utilisant le langage
 - Portail de difficulté après avoir atteint 25 de score dans chaque difficultés
 - Différents niveaux de difficulté
 - Différents HighScore selon le niveaux de difficulté
+- Changer le curseur quand on survole les difficultés et le bouton START
 
 # Séances de Développement et Planning d'Organisation de Travail : 
 
