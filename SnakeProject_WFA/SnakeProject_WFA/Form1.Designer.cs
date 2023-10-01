@@ -60,6 +60,7 @@
             this.picCanvas.BackColor = System.Drawing.Color.Green;
             this.picCanvas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picCanvas.Image = ((System.Drawing.Image)(resources.GetObject("picCanvas.Image")));
             this.picCanvas.Location = new System.Drawing.Point(12, 21);
             this.picCanvas.Name = "picCanvas";
             this.picCanvas.Size = new System.Drawing.Size(580, 680);

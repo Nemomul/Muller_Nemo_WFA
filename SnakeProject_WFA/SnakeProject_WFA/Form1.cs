@@ -215,9 +215,6 @@ namespace SnakeProject_WFA
 
             picCanvas.Invalidate(); // Rafraîchissement de l'affichage
 
-
-
-
         }
 
         // Fonction de mise à jour de l'affichage dans le PictureBox
